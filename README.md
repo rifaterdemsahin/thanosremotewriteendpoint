@@ -34,7 +34,7 @@ Before starting the deployment, ensure that you have the following:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
+git clone https://github.com/rifaterdemsahin/thanosremotewriteendpoint
 cd <your-repo>
 ```
 
