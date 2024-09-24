@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thanos-receiver
+  namespace: monitoring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thanos-receiver
+  template:
+    metadata:
+      labels:
+        app: thanos-receiver
+    spec:
+      containers:
+        - name: thanos-receiver
+          image: thanosio/thanos:v0.31.0
+          args:
+            - receive
+            - --receive.local-endpoint=0.0.0.0:19291
+            - --tsdb.path=/var/thanos/data
+          ports:
+            - containerPort: 19291
+          volumeMounts:
+            - name: thanos-data
+              mountPath: /var/thanos/data
+      volumes:
+        - name: thanos-data
+          emptyDir: {}
