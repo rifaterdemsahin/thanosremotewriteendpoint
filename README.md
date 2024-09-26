@@ -133,10 +133,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Happy Monitoring! 🚀
 ```
-
-### Instructions:
-1. Replace `<your-username>` and `<your-repo>` with the correct GitHub repository details.
-2. Adjust the architecture diagram explanation if your setup differs.
-3. Customize the README to include more details about your specific use case.
-
-This `README.md` gives an easy-to-follow guide for users deploying Thanos with Prometheus on OpenShift.
